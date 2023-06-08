@@ -3,6 +3,7 @@ from pygame.locals import *
 import time
 import random
 SIZE = 40
+clock = pygame.time.Clock()
 class Apple:
     def __init__(self, parent_screen):
         self.parent_screen = parent_screen
@@ -113,6 +114,7 @@ class Game:
         self.snake.walk()
         self.apple.draw()
         self.display_score()
+        clock.tick(60)
         pygame.display.flip()
 
         if self.is_collision(self.snake.x[0],self.snake.y[0],self.apple.x,self.apple.y):
@@ -177,7 +179,7 @@ class Game:
                 pause = True
                 self.reset()
 
-            time.sleep(.2)
+            time.sleep(.1)
 
 
 if __name__ =='__main__':
