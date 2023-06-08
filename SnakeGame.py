@@ -138,7 +138,6 @@ class Game:
         line2=font.render("To play again press Enter.To exit press Escape!",True,(255,255,255))
         self.surface.blit(line2, (200, 350))
         pygame.mixer.music.pause()
-        pygame.mixer.music.load('resources/[Gudanglagu456.CC] y2mate.com - Abba  Money Money Money Official Music Video.mp3')
         pygame.display.flip()
 
     def reset(self):
